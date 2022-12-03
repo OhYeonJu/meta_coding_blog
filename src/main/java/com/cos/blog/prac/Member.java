@@ -1,4 +1,4 @@
-package com.cos.blog.test;
+package com.cos.blog.prac;
 
 import lombok.*;
 

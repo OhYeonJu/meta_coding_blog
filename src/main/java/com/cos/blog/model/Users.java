@@ -1,14 +1,23 @@
 package com.cos.blog.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.DynamicInsert;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
-public class User {
-
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder // 빌더 패턴
+@DynamicInsert
+public class Users {
     @Id // pk
     @GeneratedValue(strategy = GenerationType.IDENTITY) // 프로젝트에서 연결된 DB의 넘버링 전략을 따라간다.
     private int id; // 시퀀스, auto_increment
